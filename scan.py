@@ -1,6 +1,8 @@
 import json
 import sys
 import time
+import subprocess
+from get_ipv4 import *
 
 input_file = sys.argv[1]
 domain_dict = {}
@@ -13,9 +15,12 @@ with open(input_file, "r") as input:
         i = 0
         scan_dict = {}
         while i<len(scan_type):
-                scan_dict[scan_type[i]] = time.time()
+                scan_dict[scan_type[i]] = float(time.time())
                 i = i + 1
+        ipv4 = get_ipv4_address(domain)
         domain_dict[domain] = scan_dict
+
+# for domain in domain_dict:
 
 out_file = open(output_file, "w")
 json.dump(domain_dict, out_file, sort_keys=True, indent=4)
