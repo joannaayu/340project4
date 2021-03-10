@@ -6,14 +6,14 @@ def get_http_server(domain):
     url = f"http://{domain}/"
     r = requests.get(url)
     #print(r.url)
-    print(url)
+    # print(url)
     #url = "http://www.usnews.com"
 
     try:
         response = requests.head(url, timeout=5, headers=headers)
-        print(response.history)
-        print(response)
-        print(response.headers)
+        # print(response.history)
+        # print(response)
+        # print(response.headers)
         if 'Server' in response.headers:
             server = response.headers["Server"]
             http_server = server

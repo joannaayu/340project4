@@ -6,7 +6,7 @@ def get_insecure(domain):
     url = f"http://{domain}/"
     r = requests.get(url)
     #print(r.url)
-    print(url)
+    # print(url)
     #url = "http://www.usnews.com"
 
     try:
