@@ -2,7 +2,7 @@ import requests
 import json
 
 def get_insecure(domain):
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36', "Upgrade-Insecure-Requests": "1","DNT": "1","Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate"}
+    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'}
     url = f"http://{domain}/"
     r = requests.get(url)
     #print(r.url)
@@ -31,11 +31,11 @@ def get_insecure(domain):
     return insecure
 
 
-# import sys
-# import socket
-#
-# #Taken from https://www.geeksforgeeks.org/port-scanner-using-python/
-#
+import sys
+import socket
+
+#Taken from https://www.geeksforgeeks.org/port-scanner-using-python/
+
 # def get_insecure_http(ipv4):
 #
 #     target = ipv4

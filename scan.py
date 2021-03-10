@@ -8,6 +8,7 @@ from get_http_server import *
 from get_insecure_http import *
 from get_redirect import *
 from get_hsts import *
+from get_rdns import *
 
 input_file = sys.argv[1]
 domain_dict = {}
@@ -50,6 +51,9 @@ with open(input_file, "r") as input:
 
         hsts = get_hsts(domain)
         domain_dict[domain]["hsts"] = hsts
+
+        rdns = get_rdns(ipv4)
+        domain_dict[domain]["rdns"] = rdns
 
 out_file = open(output_file, "w")
 json.dump(domain_dict, out_file, sort_keys=False, indent=4)

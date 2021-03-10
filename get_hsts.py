@@ -6,7 +6,7 @@ def get_hsts(domain):
     url = f"http://{domain}/"
     r = requests.get(url)
     #print(r.url)
-    print(url)
+    #print(url)
     hsts = False
 
     try:
