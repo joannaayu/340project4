@@ -2,12 +2,19 @@ import json
 import sys
 import time
 import subprocess
+import OpenSSL
+from OpenSSL import SSL
+
 from get_ipv4 import *
 from get_ipv6 import *
 from get_http_server import *
 from get_insecure_http import *
 # from insecure_http import *
 from get_redirect import *
+from get_tls_versions import *
+from get_root_ca import *
+
+
 
 input_file = sys.argv[1]
 domain_dict = {}
@@ -36,15 +43,23 @@ with open(input_file, "r") as input:
         # ipv4 = get_ipv4_address(domain)
         # domain_dict[domain]["ipv4_addresses"] = ipv4
         #
-        # http_server = get_http_server(domain)
-        # domain_dict[domain]["http_server"] = http_server
+        http_server = get_http_server(domain)
+        domain_dict[domain]["http_server"] = http_server
         #
         # insecure = get_insecure(domain)
         # domain_dict[domain]["insecure_http"] = insecure
-        #
+
+
         redirect = get_redirect(domain)
         domain_dict[domain]["redirect_to_https"] = redirect
 
+        ssl = check_ssl(domain)
+        tls = check_tls(domain)
+        finaltls = ssl + tls
+        domain_dict[domain]["tls_versions"] = finaltls
+
+        rootca = check_root(domain)
+        domain_dict[domain]["root_ca"] = rootca
 
 
 #print(get_http_server(domain))
