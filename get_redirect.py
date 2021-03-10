@@ -6,7 +6,8 @@ def get_redirect(domain):
     url = f"http://{domain}/"
     r = requests.get(url)
     #print(r.url)
-    print(url)
+    #print(url)
+    count = 0
     #url = "http://www.usnews.com"
 
     try:
