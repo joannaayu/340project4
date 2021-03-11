@@ -24,13 +24,13 @@ def get_insecure_http(ipv4):
 
     except KeyboardInterrupt:
             print("\n Exitting Program !!!!")
-            return(False)
+            return False
             sys.exit()
     except socket.gaierror:
             print("\n Hostname Could Not Be Resolved !!!!")
-            return(False)
+            return False
             sys.exit()
     except socket.error:
             print("\ Server not responding !!!!")
-            return(False)
+            return False
             sys.exit()

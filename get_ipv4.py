@@ -5,11 +5,9 @@ import re
 def get_ipv4_address(domain):
     result = subprocess.check_output(["nslookup", "-type=A", domain, "8.8.8.8"] ,
           timeout=2, stderr=subprocess.STDOUT).decode("utf-8")
-
     try:
         result = subprocess.check_output(["nslookup", "-type=A", domain, "8.8.8.8"], timeout=2, stderr=subprocess.STDOUT).decode("utf-8")
         result = result.split("\n")
-        ipv4_array = []
 
         for i in range(len(result)):
             if "Address" in result[i]:
@@ -19,15 +17,17 @@ def get_ipv4_address(domain):
 
         del ipv4_array[0]
 
-    except:
+    except subprocess.TimeoutExpired:
         print("Timeout error!")
         pass
+     
+    except:
+        print("no ipv4 addresses found")
 
     return ipv4_array
 
-
-    #
-    #
+    # result = subprocess.check_output(["nslookup", "-type=A", domain, "8.8.8.8"] ,
+    #       timeout=2, stderr=subprocess.STDOUT).decode("utf-8")
     # result = result.replace(' ', '')
     # result = result.replace('\t', '')
     # result = result.replace('\n', ':')
