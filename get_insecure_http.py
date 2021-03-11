@@ -14,18 +14,24 @@ def get_insecure(domain):
         # print(response.status_code)
         # print(response.headers)
 
-        if 301 == response.status_code or 302 == response.status_code or 200 == response.status_code:
-            insecure = True
+        insecure = True
 
-        # elif 308 == response.status_code or 301 == response.status_code and "https" in response.headers["location"]:
+        # if 301 == response.status_code or 302 == response.status_code or 200 == response.status_code:
+        #     insecure = True
+        #
+        # # elif 308 == response.status_code or 301 == response.status_code and "https" in response.headers["location"]:
+        # #     insecure = False
+        # #     redirect = True
+        #
+        # else:
         #     insecure = False
-        #     redirect = True
-
-        else:
-            insecure = False
 
     except requests.Timeout:
         print("Timeout occured, trying again")
+        insecure = False
         pass
+
+    except:
+        insecure = False
 
     return insecure

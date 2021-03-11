@@ -4,6 +4,8 @@ import time
 import subprocess
 import OpenSSL
 from OpenSSL import SSL
+import geoip2.database
+
 
 from get_ipv4 import *
 from get_ipv6 import *
@@ -13,6 +15,7 @@ from get_insecure_http import *
 from get_redirect import *
 from get_tls_versions import *
 from get_root_ca import *
+from get_geo_locations import *
 
 
 
@@ -49,7 +52,6 @@ with open(input_file, "r") as input:
         # insecure = get_insecure(domain)
         # domain_dict[domain]["insecure_http"] = insecure
 
-
         redirect = get_redirect(domain)
         domain_dict[domain]["redirect_to_https"] = redirect
 
@@ -60,6 +62,9 @@ with open(input_file, "r") as input:
 
         rootca = check_root(domain)
         domain_dict[domain]["root_ca"] = rootca
+
+        locations = get_locations(ipv4)
+        domain_dict[domain]["geo_locations"] = locations
 
 
 #print(get_http_server(domain))

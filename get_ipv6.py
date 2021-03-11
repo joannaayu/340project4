@@ -16,7 +16,9 @@ def get_ipv6_address(domain):
             if 'AAAA' in result[i]:
                 new_results_array.append(result[i+2])
 
-    except:
+    except subprocess.TimeoutExpired as err:
         print("Timeout error!")
+        pass
+
 
     return new_results_array

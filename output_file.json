@@ -1,8 +1,8 @@
 {
     "youtube.com": {
-        "scan_time": 1615367144.227776,
+        "scan_time": 1615433723.981798,
         "ipv4_addresses": [
-            "172.217.9.46"
+            "172.217.4.206"
         ],
         "ipv6_addresses": [
             "2607:f8b0:4009:815::200e"
@@ -16,10 +16,13 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "GlobalSign"
+        "root_ca": "GlobalSign",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "en.wikipedia.org": {
-        "scan_time": 1615367147.716033,
+        "scan_time": 1615433727.389306,
         "ipv4_addresses": [
             "208.80.154.224"
         ],
@@ -33,30 +36,36 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "Digital Signature Trust Co."
+        "root_ca": "Digital Signature Trust Co.",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "twitter.com": {
-        "scan_time": 1615367149.7689621,
+        "scan_time": 1615433729.193769,
         "ipv4_addresses": [
-            "104.244.42.1",
-            "104.244.42.129"
+            "104.244.42.193",
+            "104.244.42.1"
         ],
         "ipv6_addresses": [],
         "insecure_http": true,
-        "http_server": "tsa_b",
+        "http_server": "tsa_devel",
         "redirect_to_https": true,
         "tls_versions": [
             "TLSv1.2"
         ],
-        "root_ca": "DigiCert Inc"
+        "root_ca": "DigiCert Inc",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "facebook.com": {
-        "scan_time": 1615367152.6164072,
+        "scan_time": 1615433731.79649,
         "ipv4_addresses": [
-            "157.240.18.35"
+            "157.240.2.35"
         ],
         "ipv6_addresses": [
-            "2a03:2880:f127:283:face:b00c::25de"
+            "2a03:2880:f127:83:face:b00c::25de"
         ],
         "insecure_http": true,
         "http_server": null,
@@ -67,14 +76,17 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "DigiCert Inc"
+        "root_ca": "DigiCert Inc",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "amazon.com": {
-        "scan_time": 1615367155.149824,
+        "scan_time": 1615433733.7082398,
         "ipv4_addresses": [
             "54.239.28.85",
-            "205.251.242.103",
-            "176.32.103.205"
+            "176.32.103.205",
+            "205.251.242.103"
         ],
         "ipv6_addresses": [],
         "insecure_http": true,
@@ -85,10 +97,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "DigiCert Inc"
+        "root_ca": "DigiCert Inc",
+        "geo_locations": [
+            "Ashburn, Virginia, United States"
+        ]
     },
     "yelp.com": {
-        "scan_time": 1615367158.772883,
+        "scan_time": 1615433736.474488,
         "ipv4_addresses": [
             "151.101.68.116"
         ],
@@ -102,15 +117,18 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "DigiCert Inc"
+        "root_ca": "DigiCert Inc",
+        "geo_locations": [
+            "Denver, Colorado, United States"
+        ]
     },
     "reddit.com": {
-        "scan_time": 1615367163.179775,
+        "scan_time": 1615433743.823862,
         "ipv4_addresses": [
-            "151.101.65.140",
-            "151.101.193.140",
+            "151.101.129.140",
             "151.101.1.140",
-            "151.101.129.140"
+            "151.101.65.140",
+            "151.101.193.140"
         ],
         "ipv6_addresses": [],
         "insecure_http": true,
@@ -121,14 +139,17 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "DigiCert Inc"
+        "root_ca": "DigiCert Inc",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "imdb.com": {
-        "scan_time": 1615367168.826798,
+        "scan_time": 1615433749.111831,
         "ipv4_addresses": [
-            "52.94.228.167",
             "52.94.237.74",
-            "52.94.225.248"
+            "52.94.225.248",
+            "52.94.228.167"
         ],
         "ipv6_addresses": [],
         "insecure_http": true,
@@ -139,15 +160,18 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "Amazon"
+        "root_ca": "Amazon",
+        "geo_locations": [
+            "Ashburn, Virginia, United States"
+        ]
     },
     "fandom.com": {
-        "scan_time": 1615367174.882646,
+        "scan_time": 1615433753.6378272,
         "ipv4_addresses": [
-            "151.101.192.194",
+            "151.101.128.194",
             "151.101.64.194",
             "151.101.0.194",
-            "151.101.128.194"
+            "151.101.192.194"
         ],
         "ipv6_addresses": [],
         "insecure_http": true,
@@ -157,15 +181,18 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "GlobalSign nv-sa"
+        "root_ca": "GlobalSign nv-sa",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "pinterest.com": {
-        "scan_time": 1615367176.5689652,
+        "scan_time": 1615433755.082958,
         "ipv4_addresses": [
-            "151.101.128.84",
-            "151.101.0.84",
+            "151.101.192.84",
             "151.101.64.84",
-            "151.101.192.84"
+            "151.101.0.84",
+            "151.101.128.84"
         ],
         "ipv6_addresses": [],
         "insecure_http": false,
@@ -177,14 +204,17 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "DigiCert Inc"
+        "root_ca": "DigiCert Inc",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "tripadvisor.com": {
-        "scan_time": 1615367178.93094,
+        "scan_time": 1615433757.0337899,
         "ipv4_addresses": [
+            "192.229.189.15",
             "192.229.162.112",
-            "192.229.182.112",
-            "192.229.189.15"
+            "192.229.182.112"
         ],
         "ipv6_addresses": [],
         "insecure_http": true,
@@ -194,29 +224,34 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "GlobalSign"
+        "root_ca": "GlobalSign",
+        "geo_locations": [
+            "United States",
+            "Texas, United States",
+            "London, England, United Kingdom"
+        ]
     },
     "instagram.com": {
-        "scan_time": 1615367186.6899269,
+        "scan_time": 1615433761.8529081,
         "ipv4_addresses": [
-            "3.233.160.166",
-            "52.0.212.144",
-            "3.213.147.143",
-            "54.234.67.113",
-            "3.223.216.208",
-            "3.208.182.172",
-            "52.73.249.1",
-            "3.209.208.143"
+            "3.217.69.239",
+            "3.209.60.185",
+            "34.206.159.43",
+            "54.159.214.57",
+            "3.230.53.225",
+            "34.231.40.113",
+            "3.226.5.232",
+            "52.1.238.189"
         ],
         "ipv6_addresses": [
-            "2406:da00:ff00::3d4:812d",
-            "2406:da00:ff00::22e8:25e0",
-            "2406:da00:ff00::3dc:535d",
-            "2406:da00:ff00::3e0:2412",
-            "2406:da00:ff00::3404:8691",
-            "2406:da00:ff00::36d2:98b3",
-            "2406:da00:ff00::b849:e13d",
-            "2406:da00:ff00::3407:b8b1"
+            "2406:da00:ff00::3d4:1500",
+            "2406:da00:ff00::35d:eb87",
+            "2406:da00:ff00::3e5:d18",
+            "2406:da00:ff00::22c8:a443",
+            "2406:da00:ff00::36d0:3f1d",
+            "2406:da00:ff00::3693:63a1",
+            "2406:da00:ff00::3d6:fdb7",
+            "2406:da00:ff00::36ae:304c"
         ],
         "insecure_http": true,
         "http_server": "proxygen-bolt",
@@ -227,10 +262,17 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "DigiCert Inc"
+        "root_ca": "DigiCert Inc",
+        "geo_locations": [
+            "United States",
+            "Charlotte, North Carolina, United States",
+            "Ashburn, Virginia, United States",
+            "Queens, New York, United States",
+            "Virginia, United States"
+        ]
     },
     "walmart.com": {
-        "scan_time": 1615367190.8345642,
+        "scan_time": 1615433765.36623,
         "ipv4_addresses": [
             "161.170.232.170",
             "161.170.230.170"
@@ -243,10 +285,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "GlobalSign"
+        "root_ca": "GlobalSign",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "northwestern.edu": {
-        "scan_time": 1615367193.975737,
+        "scan_time": 1615433768.4065511,
         "ipv4_addresses": [
             "129.105.136.48"
         ],
@@ -259,10 +304,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "COMODO CA Limited"
+        "root_ca": "COMODO CA Limited",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "mccormick.northwestern.edu": {
-        "scan_time": 1615367197.248489,
+        "scan_time": 1615433772.6599848,
         "ipv4_addresses": [
             "129.105.1.129"
         ],
@@ -275,10 +323,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "The USERTRUST Network"
+        "root_ca": "The USERTRUST Network",
+        "geo_locations": [
+            "Chicago, Illinois, United States"
+        ]
     },
     "kellogg.northwestern.edu": {
-        "scan_time": 1615367199.064897,
+        "scan_time": 1615433774.1175091,
         "ipv4_addresses": [
             "165.124.147.150"
         ],
@@ -291,10 +342,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "The USERTRUST Network"
+        "root_ca": "The USERTRUST Network",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "users.cs.northwestern.edu": {
-        "scan_time": 1615367201.894128,
+        "scan_time": 1615433777.171693,
         "ipv4_addresses": [
             "165.124.180.20"
         ],
@@ -305,10 +359,13 @@
         "tls_versions": [
             "TLSv1.2"
         ],
-        "root_ca": "The USERTRUST Network"
+        "root_ca": "The USERTRUST Network",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "it.eecs.northwestern.edu": {
-        "scan_time": 1615367203.54482,
+        "scan_time": 1615433778.4175239,
         "ipv4_addresses": [
             "129.105.8.2"
         ],
@@ -317,10 +374,13 @@
         "http_server": "Apache",
         "redirect_to_https": false,
         "tls_versions": [],
-        "root_ca": null
+        "root_ca": null,
+        "geo_locations": [
+            "Chicago, Illinois, United States"
+        ]
     },
     "uchicago.edu": {
-        "scan_time": 1615367204.4208782,
+        "scan_time": 1615433779.129089,
         "ipv4_addresses": [
             "34.200.129.209"
         ],
@@ -332,10 +392,13 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "The USERTRUST Network"
+        "root_ca": "The USERTRUST Network",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "illinois.edu": {
-        "scan_time": 1615367207.75857,
+        "scan_time": 1615433782.106551,
         "ipv4_addresses": [
             "192.17.172.3"
         ],
@@ -348,10 +411,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "The USERTRUST Network"
+        "root_ca": "The USERTRUST Network",
+        "geo_locations": [
+            "Urbana, Illinois, United States"
+        ]
     },
     "stevetarzia.com": {
-        "scan_time": 1615367210.0158699,
+        "scan_time": 1615433783.881587,
         "ipv4_addresses": [
             "54.245.121.172"
         ],
@@ -364,17 +430,20 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "Digital Signature Trust Co."
+        "root_ca": "Digital Signature Trust Co.",
+        "geo_locations": [
+            "Boardman, Oregon, United States"
+        ]
     },
     "clocktab.com": {
-        "scan_time": 1615367213.929522,
+        "scan_time": 1615433787.155791,
         "ipv4_addresses": [
-            "104.21.35.119",
-            "172.67.220.24"
+            "172.67.220.24",
+            "104.21.35.119"
         ],
         "ipv6_addresses": [
-            "2606:4700:3030::6815:2377",
-            "2606:4700:3036::ac43:dc18"
+            "2606:4700:3036::ac43:dc18",
+            "2606:4700:3030::6815:2377"
         ],
         "insecure_http": true,
         "http_server": "cloudflare",
@@ -385,10 +454,13 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "Baltimore"
+        "root_ca": "Baltimore",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "auditoryneuroscience.com": {
-        "scan_time": 1615367216.016974,
+        "scan_time": 1615433788.6184902,
         "ipv4_addresses": [
             "144.214.26.111"
         ],
@@ -402,10 +474,13 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "Digital Signature Trust Co."
+        "root_ca": "Digital Signature Trust Co.",
+        "geo_locations": [
+            "Central, Central and Western District, Hong Kong"
+        ]
     },
     "asee.org": {
-        "scan_time": 1615367224.666532,
+        "scan_time": 1615433796.8669949,
         "ipv4_addresses": [
             "216.185.13.131"
         ],
@@ -418,10 +493,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "The USERTRUST Network"
+        "root_ca": "The USERTRUST Network",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "gradeinflation.com": {
-        "scan_time": 1615367232.622117,
+        "scan_time": 1615433802.631216,
         "ipv4_addresses": [
             "66.70.176.24"
         ],
@@ -433,13 +511,16 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "Digital Signature Trust Co."
+        "root_ca": "Digital Signature Trust Co.",
+        "geo_locations": [
+            "Beauharnois, Quebec, Canada"
+        ]
     },
     "spacejam.com": {
-        "scan_time": 1615367234.447732,
+        "scan_time": 1615433804.2521422,
         "ipv4_addresses": [
-            "99.83.180.228",
-            "75.2.104.223"
+            "75.2.104.223",
+            "99.83.180.228"
         ],
         "ipv6_addresses": [],
         "insecure_http": true,
@@ -449,10 +530,13 @@
             "TLSv1.1",
             "TLSv1.2"
         ],
-        "root_ca": "GlobalSign"
+        "root_ca": "GlobalSign",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "pmichaud.com": {
-        "scan_time": 1615367236.590883,
+        "scan_time": 1615433806.158608,
         "ipv4_addresses": [
             "23.254.203.248"
         ],
@@ -464,17 +548,20 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "COMODO CA Limited"
+        "root_ca": "COMODO CA Limited",
+        "geo_locations": [
+            "United States"
+        ]
     },
     "kli.org": {
-        "scan_time": 1615367239.325808,
+        "scan_time": 1615433808.534196,
         "ipv4_addresses": [
             "104.21.22.57",
             "172.67.202.249"
         ],
         "ipv6_addresses": [
-            "2606:4700:3033::ac43:caf9",
-            "2606:4700:3032::6815:1639"
+            "2606:4700:3032::6815:1639",
+            "2606:4700:3033::ac43:caf9"
         ],
         "insecure_http": true,
         "http_server": "cloudflare",
@@ -485,6 +572,9 @@
             "TLSv1.2",
             "TLSv1.3"
         ],
-        "root_ca": "Baltimore"
+        "root_ca": "Baltimore",
+        "geo_locations": [
+            "United States"
+        ]
     }
 }

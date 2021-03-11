@@ -26,7 +26,7 @@ def check_root(domain):
 
     except subprocess.TimeoutExpired as err:
         print("Timer expired")
-        pass
+        return None
 
     except:
         return None
