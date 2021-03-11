@@ -3,8 +3,6 @@ import sys
 import re
 
 def get_ipv4_address(domain):
-    result = subprocess.check_output(["nslookup", "-type=A", domain, "8.8.8.8"] ,
-          timeout=2, stderr=subprocess.STDOUT).decode("utf-8")
     try:
         result = subprocess.check_output(["nslookup", "-type=A", domain, "8.8.8.8"], timeout=2, stderr=subprocess.STDOUT).decode("utf-8")
         result = result.split("\n")
