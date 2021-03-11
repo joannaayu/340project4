@@ -49,7 +49,8 @@ def get_hsts(domain):
 
 
     except requests.Timeout:
-        #print("Timeout occured, trying again")
+        hsts = False
+        print("Timeout occured, trying again")
         pass
 
 

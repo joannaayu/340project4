@@ -14,25 +14,27 @@ def get_insecure(domain):
         # print(response.status_code)
         # print(response.headers)
 
-        if 301 == response.status_code or 302 == response.status_code or 200 == response.status_code:
-            insecure = True
+        insecure = True
 
         # elif 308 == response.status_code or 301 == response.status_code and "https" in response.headers["location"]:
         #     insecure = False
         #     redirect = True
 
-        else:
-            insecure = False
-
     except requests.Timeout:
+        insecure = False
         print("Timeout occured, trying again")
         pass
+
+    except:
+        insecure = False
+        print("other error occured!")
+
 
     return insecure
 
 
-import sys
-import socket
+# import sys
+# import socket
 
 #Taken from https://www.geeksforgeeks.org/port-scanner-using-python/
 

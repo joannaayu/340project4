@@ -9,6 +9,7 @@ from get_insecure_http import *
 from get_redirect import *
 from get_hsts import *
 from get_rdns import *
+from get_rtt import *
 
 input_file = sys.argv[1]
 domain_dict = {}
@@ -54,6 +55,11 @@ with open(input_file, "r") as input:
 
         rdns = get_rdns(ipv4)
         domain_dict[domain]["rdns"] = rdns
+
+        rtt = get_rtt_range(ipv4)
+        domain_dict[domain]["rtt_range"] = rtt
+
+
 
 out_file = open(output_file, "w")
 json.dump(domain_dict, out_file, sort_keys=False, indent=4)
