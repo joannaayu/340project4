@@ -21,7 +21,6 @@ def check_root(domain):
                 root_ca = root[i+1]
 
         root_ca = root_ca.lstrip()
-        print(root_ca)
         return root_ca
 
 

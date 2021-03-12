@@ -31,10 +31,7 @@ with open(input_file, "r") as input:
                 scan_dict[scan_type[i]] = float(time.time())
                 i = i + 1
 
-        print(domain)
         domain_dict[domain] = scan_dict
-
-        print("starting with:", domain)
 
         ipv4 = get_ipv4_address(domain)
         domain_dict[domain]["ipv4_addresses"] = ipv4
@@ -70,8 +67,6 @@ with open(input_file, "r") as input:
 
         locations = get_locations(ipv4)
         domain_dict[domain]["geo_locations"] = locations
-
-        print("finished with:", domain)
 
 
 out_file = open(output_file, "w")
