@@ -31,6 +31,7 @@ def check_ssl(domain):
     except:
         # print("port closed")
         return ssltable
+        pass
 
 # def check_ssl3(domain):
 #
