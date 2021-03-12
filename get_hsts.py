@@ -50,7 +50,13 @@ def get_hsts(domain):
 
     except requests.Timeout:
         hsts = False
-        print("Timeout occured, trying again")
+        print("Timeout occured when getting HSTS")
+        pass
+
+    except:
+        #if we are unable to send the request at all
+        hsts = False
+        print("Could not send GET request for HSTS")
         pass
 
 

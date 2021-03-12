@@ -28,11 +28,13 @@ def get_http_server(domain):
 
     except requests.Timeout:
         http_server = " "
-        print("Timeout occured, trying again")
+        print("Timeout occured in HTTP Server")
         pass
 
     except:
+        #if we cannot send the get request, set server to empty string as indication
         http_server = " "
-        print("Cannot fulfill GET request")
+        print("Cannot fulfill GET request for HTTP Server")
+        pass
 
     return http_server

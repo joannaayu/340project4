@@ -17,8 +17,12 @@ def get_ipv6_address(domain):
                 new_results_array.append(result[i+2])
 
     except subprocess.TimeoutExpired as err:
-        print("Timeout error!")
+        print("Timeout error when getting IPV6")
         pass
 
+    except:
+        #nslookup did not work and not a timeout error
+        print("Unable to perform nslookup for IPV6")
+        pass
 
     return new_results_array

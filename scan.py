@@ -30,7 +30,7 @@ with open(input_file, "r") as input:
         while i<len(scan_type):
                 scan_dict[scan_type[i]] = float(time.time())
                 i = i + 1
-              
+
         domain_dict[domain] = scan_dict
 
         ipv4 = get_ipv4_address(domain)
@@ -55,7 +55,7 @@ with open(input_file, "r") as input:
 
         rootca = check_root(domain)
         domain_dict[domain]["root_ca"] = rootca
-        
+
         hsts = get_hsts(domain)
         domain_dict[domain]["hsts"] = hsts
 
@@ -67,7 +67,7 @@ with open(input_file, "r") as input:
 
         locations = get_locations(ipv4)
         domain_dict[domain]["geo_locations"] = locations
-        
+
 
 out_file = open(output_file, "w")
 json.dump(domain_dict, out_file, sort_keys=False, indent=4)

@@ -25,20 +25,21 @@ def get_rtt_range(ipv4):
                 data = sock.recv(1)
                 finish = time.time()
                 rtt = finish-start
-                print("ip:", ip_addr)
-                print("port:", port)
                 rtt_arr.append(rtt)
                 sock.close()
 
             else:
                 sock.close()
                 print("Socket timed out on port 80")
+                pass
 
         except socket.timeout:
             sock.close()
+            pass
 
         finally:
             sock.close()
+            pass
 
         try:
             if worked == False:
@@ -57,20 +58,21 @@ def get_rtt_range(ipv4):
                     data = sock.recv(1)
                     finish = time.time()
                     rtt = finish-start
-                    print("ip:", ip_addr)
-                    print("port:", port)
                     rtt_arr.append(rtt)
                     sock.close()
 
                 else:
                     sock.close()
                     print("Socket timed out on port 443")
+                    pass
 
         except socket.timeout:
             sock.close()
+            pass
 
         finally:
             sock.close()
+            pass
 
         try:
             if worked == False:
@@ -89,20 +91,21 @@ def get_rtt_range(ipv4):
                     data = sock.recv(1)
                     finish = time.time()
                     rtt = finish-start
-                    print("ip:", ip_addr)
-                    print("port:", port)
                     rtt_arr.append(rtt)
                     sock.close()
 
                 else:
                     sock.close()
                     print("Socket timed out on port 22")
+                    pass
 
         except socket.timeout:
             sock.close()
+            pass
 
         finally:
             sock.close()
+            pass
 
     if len(rtt_arr) == 0:
         return None
@@ -112,7 +115,7 @@ def get_rtt_range(ipv4):
         max_val = max(rtt_arr)
         min_val = min(rtt_arr)
 
-        final_arr = [max_val, min_val]
+        final_arr = [min_val, max_val]
 
     return final_arr
 

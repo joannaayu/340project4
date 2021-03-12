@@ -20,14 +20,13 @@ def get_rdns(ipv4):
             if len(rdns[1]) != 1:
                 other_rdns = rdns[1]
                 #del other_rdns[0]
-                print(other_rdns)
+                #print(other_rdns)
                 for r in range(len(other_rdns)):
                     if other_rdns[r] not in rdns_arr:
                         rdns_arr.append(other_rdns[r])
 
 
         except socket.herror:
-            print("Socket error, unknown host")
             pass
 
 
