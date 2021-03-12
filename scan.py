@@ -31,6 +31,7 @@ with open(input_file, "r") as input:
                 scan_dict[scan_type[i]] = float(time.time())
                 i = i + 1
 
+        print(domain)
         domain_dict[domain] = scan_dict
 
         ipv4 = get_ipv4_address(domain)

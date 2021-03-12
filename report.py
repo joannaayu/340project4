@@ -28,13 +28,13 @@ with open(input_file) as input:
         for i in full_dict[domain]:
 
             if full_dict[domain][i] == None:
-                row.append("None")    
+                row.append("None")
             else:
                 row.append(full_dict[domain][i])
 
         domain_table.add_row(row)
-    
-    
+
+
     #RTT RANGE TABLE
     rtt_table = texttable.Texttable(100)
     rtt_table.set_cols_align(["c", "c"])
@@ -59,17 +59,16 @@ with open(input_file) as input:
         row = []
         row.append(domain)
         row.append(rtt_sorted[domain])
-        print(row)
         rtt_table.add_row(row)
 
 
-        
+
     #ROOT TABLE AND SERVER TABLE
     root_table = texttable.Texttable(75)
     root_table.set_cols_align(["c", "c"])
     root_table.set_cols_valign(["t", "t"])
 
-   
+
     server_table = texttable.Texttable(75)
     server_table.set_cols_align(["c", "c"])
     server_table.set_cols_valign(["t", "t"])
@@ -111,7 +110,81 @@ with open(input_file) as input:
         row.append(new_server_dict[server_name])
         server_table.add_row(row)
 
-        
-        
-print(domain_table.draw() + "\n""\n", rtt_table.draw() + "\n""\n", root_table.draw() + "\n""\n", server_table.draw() + "\n""\n", file=open(output_file, "w"))
-outfile.close()
+
+    percentage_table = texttable.Texttable(75)
+    percentage_table.set_cols_align(["c", "c"])
+    percentage_table.set_cols_valign(["t", "t"])
+    percentage_table.add_row(["Feature", "Percentage %"])
+
+    percentage_dict = {}
+
+    sslv2 = 0
+    sslv3 = 0
+    tls1_0 = 0
+    tls1_1 = 0
+    tls1_2 = 0
+    tls1_3 = 0
+
+    insecure = 0
+    redirect = 0
+    hsts = 0
+    ipv6 = 0
+
+    for domain in full_dict:
+        if "SSLv2" in full_dict[domain]["tls_versions"]:
+            sslv2 += 1
+
+        if "SSLv3" in full_dict[domain]["tls_versions"]:
+            sslv3 += 1
+
+        if "TLSv1.0" in full_dict[domain]["tls_versions"]:
+            tls1_0 += 1
+
+        if "TLSv1.1" in full_dict[domain]["tls_versions"]:
+            tls1_1 += 1
+
+        if "TLSv1.2" in full_dict[domain]["tls_versions"]:
+            tls1_2 += 1
+
+        if "TLSv1.3" in full_dict[domain]["tls_versions"]:
+            tls1_3 += 1
+
+        if full_dict[domain]["insecure_http"] == True:
+            insecure += 1
+
+        if full_dict[domain]["redirect_to_https"] == True:
+            redirect += 1
+
+        if full_dict[domain]["hsts"] == True:
+            hsts += 1
+
+        if len(full_dict[domain]["ipv6_addresses"]) != 0:
+            ipv6 += 1
+
+    total = len(full_dict)
+
+    percentage_dict["SSLv2"] = sslv2/total
+    percentage_dict["SSLv3"] = sslv3/total
+    percentage_dict["TSSv1.0"] = tls1_0/total
+    percentage_dict["TSSv1.1"] = tls1_1/total
+    percentage_dict["TSSv1.2"] = tls1_2/total
+    percentage_dict["TSSv1.3"] = tls1_3/total
+    percentage_dict["Plain HTTP"] = insecure/total
+    percentage_dict["HTTPS Redirect"] = redirect/total
+    percentage_dict["HSTS"] = hsts/total
+    percentage_dict["IPV6"] = ipv6/total
+
+    for feat in percentage_dict:
+        row = [feat, (100*percentage_dict[feat])]
+        percentage_table.add_row(row)
+
+
+
+
+
+
+
+
+
+print(domain_table.draw() + "\n""\n", rtt_table.draw() + "\n""\n", root_table.draw() + "\n""\n", server_table.draw() + "\n""\n", percentage_table.draw() + "\n""\n", file=open(output_file, "w"))
+# output_file.close()

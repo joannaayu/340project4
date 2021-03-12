@@ -9,7 +9,7 @@ def check_root(domain):
     url = domain + ":443"
     try:
         root = subprocess.check_output(["openssl", "s_client", "-connect", url], input=b'',
-              timeout=2, stderr=subprocess.STDOUT).decode("utf-8")
+              timeout=4, stderr=subprocess.STDOUT).decode("utf-8")
 
         root = root.split('\n')
         root = root[0]
@@ -21,6 +21,7 @@ def check_root(domain):
                 root_ca = root[i+1]
 
         root_ca = root_ca.lstrip()
+        print(root_ca)
         return root_ca
 
 
