@@ -14,8 +14,6 @@ def redirect(url, counter):
     if counter == 10:
         return False
 
-    #r = requests.get(url)
-
 
     try:
         response = requests.head(url, timeout=5, headers=headers)
@@ -40,6 +38,6 @@ def redirect(url, counter):
         pass
 
     except:
-        #unable to send requests to redireects
+        #unable to send requests to redirects
         print("Failed to send GET request for redirect")
         pass

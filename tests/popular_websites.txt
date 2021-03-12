@@ -29,7 +29,6 @@ merriam-webster.com
 gamepedia.com
 microsoft.com
 target.com
-homedepot.com
 quora.com
 nih.gov
 rottentomatoes.com
@@ -49,7 +48,6 @@ msn.com
 usatoday.com
 medicalnewstoday.com
 urbandictionary.com
-usnews.com
 foxnews.com
 genius.com
 allrecipes.com
@@ -88,7 +86,6 @@ steamcommunity.com
 chase.com
 wellsfargo.com
 npr.org
-apartments.com
 roblox.com
 huffpost.com
 books.google.com

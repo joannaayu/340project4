@@ -5,7 +5,6 @@ import operator
 
 
 input_file = sys.argv[1]
-# domain_dict = {}
 
 output_file = sys.argv[2]
 
@@ -14,7 +13,7 @@ with open(input_file) as input:
 
     full_dict = json.load(input)
 
-    #DOMAIN TABLE
+    #DOMAIN TABLE-------------------------------------------------------------------------
     domain_table = texttable.Texttable(375)
     domain_table.set_cols_align(["l", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c"])
     domain_table.set_cols_valign(["t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t"])
@@ -28,14 +27,14 @@ with open(input_file) as input:
         for i in full_dict[domain]:
 
             if full_dict[domain][i] == None:
-                row.append("None")    
+                row.append("None")
             else:
                 row.append(full_dict[domain][i])
 
         domain_table.add_row(row)
-    
-    
-    #RTT RANGE TABLE
+
+
+    #RTT RANGE TABLE-------------------------------------------------------------------------
     rtt_table = texttable.Texttable(100)
     rtt_table.set_cols_align(["c", "c"])
     rtt_table.set_cols_valign(["c", "t"])
@@ -59,17 +58,15 @@ with open(input_file) as input:
         row = []
         row.append(domain)
         row.append(rtt_sorted[domain])
-        print(row)
         rtt_table.add_row(row)
 
 
-        
-    #ROOT TABLE AND SERVER TABLE
+
+    #ROOT TABLE AND SERVER TABLE-------------------------------------------------------------------------
     root_table = texttable.Texttable(75)
     root_table.set_cols_align(["c", "c"])
     root_table.set_cols_valign(["t", "t"])
 
-   
     server_table = texttable.Texttable(75)
     server_table.set_cols_align(["c", "c"])
     server_table.set_cols_valign(["t", "t"])
@@ -111,7 +108,9 @@ with open(input_file) as input:
         row.append(new_server_dict[server_name])
         server_table.add_row(row)
 
-        
-        
+
+
+
+
+
 print(domain_table.draw() + "\n""\n", rtt_table.draw() + "\n""\n", root_table.draw() + "\n""\n", server_table.draw() + "\n""\n", file=open(output_file, "w"))
-outfile.close()

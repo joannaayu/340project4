@@ -37,6 +37,10 @@ def get_rtt_range(ipv4):
             sock.close()
             pass
 
+        except:
+            sock.close()
+            pass
+
         finally:
             sock.close()
             pass
@@ -70,6 +74,10 @@ def get_rtt_range(ipv4):
             sock.close()
             pass
 
+        except:
+            sock.close()
+            pass
+
         finally:
             sock.close()
             pass
@@ -100,6 +108,10 @@ def get_rtt_range(ipv4):
                     pass
 
         except socket.timeout:
+            sock.close()
+            pass
+
+        except:
             sock.close()
             pass
 
