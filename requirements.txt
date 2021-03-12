@@ -14,7 +14,7 @@ matplotlib==3.3.4
 maxminddb==2.0.3
 multidict==5.1.0
 networkx==2.5
-numpy==1.20.1
+numpy==1.19.5
 Pillow==8.1.0
 pycparser==2.20
 pyOpenSSL==20.0.1

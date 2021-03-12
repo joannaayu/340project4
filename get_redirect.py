@@ -19,13 +19,10 @@ def redirect(url, counter):
         response = requests.head(url, timeout=5, headers=headers)
 
         if 300 <= response.status_code < 310:
-            # print(response.headers["location"])
                 if "https" in response.headers["location"]:
                     return True
 
                 else:
-                    # print("THIS IS COUNTER", counter)
-                    # print("THIS IS RESPONSE", response.headers["location"])
                     return redirect(response.headers["location"], (counter + 1))
 
         else:
